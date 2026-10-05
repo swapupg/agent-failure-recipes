@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://swapupg.github.io/agent-failure-recipes/sitemap.xml

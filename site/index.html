@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f3ed" />
+    <meta name="description" content="Three small, executable tests for tool-using agents. Reproduce a failure, apply a repair, and take the test into your own code. No API keys." />
+    <meta property="og:title" content="Agent Failure Recipes | Small failures. Useful tests." />
+    <meta property="og:description" content="Lost responses, premature completion, and runaway retries. Run the failure. Inspect the state. Keep the test." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://swapupg.github.io/agent-failure-recipes/social.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://swapupg.github.io/agent-failure-recipes/" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Agent Failure Recipes | Small failures. Useful tests.</title>
+    <script type="module" src="./src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip" href="#workbench">Skip to recipe</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="./" aria-label="Agent Failure Recipes home"><span class="mark" aria-hidden="true">[↳]</span><span>Agent Failure<br /><strong>Recipes</strong></span></a>
+      <nav aria-label="Main navigation"><a href="https://github.com/swapupg/agent-failure-recipes#quick-start">Quick start</a><a href="https://github.com/swapupg/agent-failure-recipes">Source ↗</a><button id="theme" hidden aria-label="Switch color theme" type="button">◐ <span>Theme</span></button></nav>
+    </header>
+    <main>
+      <section class="hero wrap" aria-labelledby="headline">
+        <div><p class="eyebrow"><span class="status-dot"></span> OPEN SOURCE · TYPESCRIPT · V0.1</p><h1 id="headline">Small failures.<br /><span>Useful tests.</span></h1><p class="intro">Your agent’s tool call can fail after the work is done. Find the bug, understand the repair, and take the test into your own code.</p><a class="text-link" href="https://github.com/swapupg/agent-failure-recipes#quick-start">Get running in your terminal <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-note"><span class="eyebrow">THE RECIPE</span><ol><li><span>01</span><div><strong>Reproduce the failure</strong><small>A controlled fault. A real state change.</small></div></li><li><span>02</span><div><strong>Make one repair</strong><small>Same starting point. Different behavior.</small></div></li><li><span>03</span><div><strong>Keep the regression test</strong><small>A small example you can adapt.</small></div></li></ol><p>No model calls. No API keys. No account.</p></div>
+      </section>
+      <section class="wrap lab-section" aria-labelledby="lab-title">
+        <div class="section-heading"><h2 id="lab-title">Pick a failure. Follow the evidence.</h2><span class="eyebrow">03 EXECUTABLE RECIPES</span></div>
+        <div id="recipe-picker" class="recipe-picker" aria-label="Choose a recipe"></div>
+        <p id="route-error" class="notice" hidden></p>
+        <div id="workbench" class="workbench" tabindex="-1" aria-busy="false"></div>
+        <p class="disclosure">Controlled fixtures, not model benchmarks. The browser, CLI and tests run the same recipe code. All tickets, reports and service calls here are simulated.</p>
+      </section>
+      <section class="wrap bottom-grid" aria-label="Use the recipes">
+        <div class="quickstart"><p class="eyebrow">FROM BROWSER TO CODE</p><h2>Make this your next test.</h2><p>Clone the repository. Run all three recipes locally. Then swap a fixture for your own disposable test service.</p><pre><code>git clone https://github.com/swapupg/agent-failure-recipes.git
+cd agent-failure-recipes
+npm ci
+npm run check
+npm run recipes</code></pre><p class="fine">Requires Node.js 24 or later. No runtime dependencies. Expected failures are verified by the teaching suite.</p><a class="text-link" href="https://github.com/swapupg/agent-failure-recipes/blob/main/docs/adapting.md">How to adapt a recipe ↗</a></div>
+        <div class="principles"><p class="eyebrow">A SMALLER STARTING POINT</p><h2>Keep your stack.<br />Add an assertion.</h2><p>These recipes teach what to check when the software around an agent fails. They fit alongside your existing tests.</p><details><summary>Does a passing recipe prove my agent is safe?</summary><p>No. It proves one invariant under one controlled fault. Your integrations, permissions, persistence, concurrency and model behavior need their own tests.</p></details><details><summary>Why is the broken test suite green?</summary><p>The teaching tests assert that the bug is reproduced. For an intentionally failing command, run a recipe with <code>--variant broken</code>. It exits with code 1.</p></details><details><summary>What information leaves my browser?</summary><p>The lab makes no model or tool API calls and sends no analytics. Theme preference is saved locally when available. GitHub Pages serves the files and may keep hosting logs. Links to external sources navigate to those sites.</p></details><a class="text-link" href="https://modelfieldnotes.com/agent-explainer/">Explore the concepts in Agent Explainer ↗</a></div>
+      </section>
+      <noscript><div class="wrap notice">The interactive lab needs JavaScript. All three recipes, explanations and executable tests are available in the <a href="https://github.com/swapupg/agent-failure-recipes">source repository</a>. The quick-start commands above work independently of this page.</div></noscript>
+    </main>
+    <footer class="wrap"><p>By <a href="https://modelfieldnotes.com/about/">Swapnil Upganlawar</a><br /><span>Building with AI. Sharing what holds up.</span></p><div><a href="https://github.com/swapupg/agent-failure-recipes/blob/main/LICENSE">MIT license</a><a href="https://github.com/swapupg/agent-failure-recipes/issues/new/choose">Report an issue</a><a href="https://modelfieldnotes.com/">Model Fieldnotes ↗</a></div></footer>
+  </body>
+</html>
